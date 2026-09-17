@@ -204,6 +204,58 @@ npx expo start -c
 
 ---
 
+## Evidencias
+
+### Evidencia 1
+
+![Evidencia 1](imagenes/evidencias/evidencia1.png)
+
+**Entrega para Quiz: evidencia**
+
+### Evidencia 2
+
+![Evidencia 2](imagenes/evidencias/evidencia2.png)
+
+**Entrega para Quiz: evidencia**
+
+### Evidencia 3
+
+![Evidencia 3](imagenes/evidencias/evidencia3.png)
+
+**Entrega para Quiz: evidencia**
+
+### Evidencia 4
+
+![Evidencia 4](imagenes/evidencias/evidencia4.png)
+
+**Entrega para Quiz: evidencia**
+
+### Evidencia 5
+
+![Evidencia 5](imagenes/evidencias/evidencia5.png)
+
+**Entrega para Quiz: evidencia**
+
+### Evidencia 6
+
+![Evidencia 6](imagenes/evidencias/evidencia6.png)
+
+**Entrega para Quiz: evidencia**
+
+### Evidencia 7
+
+![Evidencia 7](imagenes/evidencias/evidencia7.png)
+
+**Entrega para Quiz: evidencia**
+
+### Evidencia 8
+
+![Evidencia 8](imagenes/evidencias/evidencia8.png)
+
+**Entrega para Quiz: evidencia**
+
+---
+
 ## Créditos
 
 Proyecto basado en [adiacla/Deployment-Mobile-Yolo](https://github.com/adiacla/Deployment-Mobile-Yolo). El entrenamiento del modelo y el enunciado original pertenecen a su autor.
