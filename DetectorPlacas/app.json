@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Detector de Placas",
+    "slug": "detector-placas",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "detectorplacas",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Permite a la app acceder a la cámara para detectar placas vehiculares.",
+        "NSMicrophoneUsageDescription": "Permite a la app usar el micrófono para reproducir voz."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.INTERNET"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permite a $(PRODUCT_NAME) acceder a tu cámara para detectar placas.",
+          "microphonePermission": "Permite a $(PRODUCT_NAME) acceder a tu micrófono.",
+          "recordAudioAndroid": true
+        }
+      ]
+    ]
+  }
+}

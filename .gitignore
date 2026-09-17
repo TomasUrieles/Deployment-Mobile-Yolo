@@ -1,0 +1,36 @@
+# Llaves y credenciales
+*.pem
+*.ppk
+*.key
+*.p8
+*.p12
+*.mobileprovision
+
+# Env / secretos
+.env
+.env.*
+!.env.example
+
+# Node (por si acaso)
+node_modules/
+
+# Datos de la app itinerantes
+.expo/
+dist/
+
+# Herramienta firewall local (solo Windows, específico de la máquina)
+DetectorPlacas/fix-firewall.cmd
+
+# Asistentes
+DetectorPlacas/.claude/
+DetectorPlacas/CLAUDE.md
+
+# SO
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

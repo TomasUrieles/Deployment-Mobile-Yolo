@@ -23,6 +23,7 @@ MODEL_PATH = os.getenv("MODEL_PATH", "best.pt")  # Ruta al modelo YOLO
 OCR_LANGS = os.getenv("OCR_LANGS", "en").split(",")
 CONF_THRESH = float(os.getenv("CONF_THRESH", 0.25))
 RETURN_IMAGE = True  # Devolver imagen con detecciones
+MAX_PART_SIZE = int(os.getenv("MAX_PART_SIZE", 15 * 1024 * 1024))  # Límite por campo de formulario (15MB)
 
 # -------------------------
 # App init
@@ -84,10 +85,7 @@ def home():
 
 
 @app.post("/predict/")
-async def predict(
-    file: Optional[UploadFile] = File(None),
-    image_base64: Optional[str] = Form(None)
-):
+async def predict(request: Request):
     """
     Recibe una imagen (multipart o base64) y devuelve:
     {
@@ -100,6 +98,11 @@ async def predict(
     """
     try:
         logger.info("📩 Petición recibida en /predict/")
+
+        # Leer formulario (multipart o urlencoded) con límite ampliado
+        form = await request.form(max_part_size=MAX_PART_SIZE)
+        file = form.get("file")
+        image_base64 = form.get("image_base64")
 
         # Leer imagen desde form-data o base64
         if file:
